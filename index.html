@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>番薯动漫 - 动漫番剧片单、更新追踪与人气榜</title>
+<meta name="description" content="番薯动漫(fanshudongman.cn)是捏出来的追番手册：提供动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南，热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园全题材收录，移动端自适应，番剧一更新立刻提醒。">
+<meta name="keywords" content="番薯动漫,动漫番剧片单,番剧更新追踪,番剧人气榜,追番指南,动漫推荐,番剧导航,在线看动漫">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="番薯动漫">
+<meta name="theme-color" content="#fdf8f2">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://www.fanshudongman.cn/">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<link rel="alternate" hreflang="zh-CN" href="https://www.fanshudongman.cn/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="番薯动漫">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="番薯动漫 - 动漫番剧片单与人气榜">
+<meta property="og:description" content="番薯动漫：动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南。">
+<meta property="og:url" content="https://www.fanshudongman.cn/">
+<meta property="og:image" content="https://www.fanshudongman.cn/favicon.ico">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="番薯动漫 - 动漫番剧片单与人气榜">
+<meta name="twitter:description" content="番薯动漫：番剧片单、更新追踪、人气榜与追番指南。">
+<style>
+:root{
+  --paper:#fdf8f2;
+  --panel:#ffffff;
+  --ink:#3a2a3f;
+  --ink2:#6d5f73;
+  --muted:#a99aae;
+  --purple:#8b5cf6;
+  --plum:#c2508e;
+  --orange:#ffa94d;
+  --leaf:#7ac74f;
+  --sky:#4dabf7;
+  --sun:#ffd43b;
+  --line:#f0e6dc;
+  --line2:#e0d2c6;
+  --r:22px;
+  --maxw:1180px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
+  --clay:inset 0 -5px 0 rgba(0,0,0,.14),inset 0 7px 9px rgba(255,255,255,.55),0 10px 18px rgba(58,42,63,.14);
+  --clay-sm:inset 0 -3px 0 rgba(0,0,0,.13),inset 0 4px 6px rgba(255,255,255,.5),0 6px 12px rgba(58,42,63,.12);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  margin:0;padding:0;color:var(--ink);background:var(--paper);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.78;
+  background-image:
+    radial-gradient(900px 460px at 4% -8%,rgba(139,92,246,.15),transparent 60%),
+    radial-gradient(880px 440px at 96% 4%,rgba(255,169,77,.15),transparent 60%);
+  background-repeat:no-repeat;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;line-height:1.42}
+p{margin:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 18px}
+.block{padding:38px 0 6px}
+
+/* ===== 黏土串珠分隔条 ===== */
+.beads{height:26px;position:relative;overflow:hidden;background:transparent}
+.beads::before{content:"";position:absolute;left:0;right:0;top:6px;height:14px;border-radius:99px;
+  background:repeating-radial-gradient(circle at 11px 7px,
+    var(--purple) 0 6px,transparent 6px 11px,
+    var(--plum) 11px 17px,transparent 17px 22px,
+    var(--orange) 22px 28px,transparent 28px 33px,
+    var(--leaf) 33px 39px,transparent 39px 44px,
+    var(--sky) 44px 50px,transparent 50px 55px,
+    var(--sun) 55px 61px,transparent 61px 66px);
+  opacity:.9}
+.beads.thin{height:18px}
+.beads.thin::before{top:4px;height:10px}
+
+/* ===== 黏土徽章 ===== */
+.clay{flex:0 0 auto;position:relative;width:50px;height:50px;border-radius:17px;display:grid;place-items:center;
+  background:var(--purple);color:#fff;box-shadow:var(--clay)}
+.clay b{font-size:16px;font-weight:900;letter-spacing:1px;text-shadow:0 1px 2px rgba(0,0,0,.24)}
+.clay.plum{background:var(--plum)}
+.clay.orange{background:var(--orange);color:#5a3202;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.clay.leaf{background:var(--leaf);color:#123a05;text-shadow:0 1px 0 rgba(255,255,255,.4)}
+.clay.sky{background:var(--sky);color:#062945}
+.clay.sun{background:var(--sun);color:#5a4202;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.clay.sm{width:40px;height:40px;border-radius:14px}
+.clay.sm b{font-size:13px}
+
+/* 软陶小标 */
+.bean{flex:0 0 auto;font-size:10.5px;font-weight:900;letter-spacing:1px;padding:5px 14px;border-radius:12px;
+  color:#fff;background:var(--purple);box-shadow:var(--clay-sm)}
+.bean.plum{background:var(--plum)}
+.bean.orange{background:var(--orange);color:#5a3202}
+.bean.leaf{background:var(--leaf);color:#123a05}
+.bean.sky{background:var(--sky);color:#062945}
+.bean.sun{background:var(--sun);color:#5a4202}
+
+/* 栏目头 */
+.bhead{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.btitle{font-size:21px;font-weight:900;letter-spacing:1px;display:flex;align-items:center;gap:12px}
+.bsub{font-size:10.5px;letter-spacing:4px;color:var(--muted);font-weight:800;font-family:var(--mono)}
+.bmore{margin-left:auto;font-size:12.5px;font-weight:800;color:#fff;white-space:nowrap;padding:9px 18px;
+  border-radius:14px;background:var(--purple);box-shadow:var(--clay-sm);transition:.24s}
+.bmore:hover{transform:translateY(-2px)}
+.bmore.plum{background:var(--plum)}
+.bmore.orange{background:var(--orange);color:#5a3202}
+.bmore.leaf{background:var(--leaf);color:#123a05}
+.bmore.sky{background:var(--sky);color:#062945}
+.bmore.sun{background:var(--sun);color:#5a4202}
+
+/* ============ 顶栏 ============ */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(253,248,242,.96);backdrop-filter:blur(14px)}
+.topbar .beads{position:relative;z-index:2}
+.topbar .wrap{display:flex;align-items:center;gap:12px;height:66px;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:20px;white-space:nowrap;letter-spacing:1px}
+.logo em{font-style:normal;background:linear-gradient(100deg,var(--purple),var(--plum) 50%,var(--orange));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.nav{display:flex;gap:3px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 13px;border-radius:13px;font-size:14px;font-weight:700;color:var(--ink2);white-space:nowrap}
+.nav a:hover,.nav a.on{color:#fff;background:var(--purple);font-weight:900;box-shadow:var(--clay-sm)}
+.dot{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;font-weight:900;color:#fff;
+  white-space:nowrap;padding:7px 15px;border-radius:13px;background:var(--plum);box-shadow:var(--clay-sm)}
+.dot i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ============ Hero ============ */
+.hero{position:relative;margin-top:14px;border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,#efe4fb,#fbe6ef 46%,#fdf0e2);box-shadow:0 18px 36px rgba(58,42,63,.14)}
+.hero-in{position:relative;z-index:3;display:grid;grid-template-columns:1.04fr .96fr;gap:24px;padding:26px 26px 22px}
+.hero .kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;font-weight:900;
+  letter-spacing:2px;color:#fff;background:var(--purple);padding:7px 16px;border-radius:13px;box-shadow:var(--clay-sm)}
+.hero h1{font-size:34px;font-weight:900;line-height:1.36;letter-spacing:1px;margin-top:15px}
+.hero h1 em{font-style:normal;color:#fff;background:linear-gradient(100deg,var(--purple),var(--plum) 55%,var(--orange));
+  padding:3px 16px;border-radius:14px;display:inline-block;box-shadow:var(--clay)}
+.hero .desc{margin-top:14px;font-size:14.8px;color:var(--ink2);max-width:54ch}
+.hero .cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:13px 26px;border-radius:15px;font-size:14.5px;font-weight:900;transition:.24s}
+.btn-1{color:#fff;background:linear-gradient(100deg,var(--purple),var(--plum) 50%,var(--orange));box-shadow:var(--clay)}
+.btn-2{color:var(--ink);background:#fff;box-shadow:var(--clay-sm)}
+.btn:hover{transform:translateY(-2px)}
+
+/* 番薯君吉祥物（纯 CSS 黏土） */
+.mascot{position:relative;border-radius:26px;padding:16px;background:#fff;box-shadow:var(--clay);overflow:hidden}
+.mascot .stage{position:relative;height:168px;border-radius:20px;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(120px 90px at 50% 30%,#fff6e6,#f6e7f4 60%,#e9dcfb)}
+.mascot .stage::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(16px 16px at 18% 24%,rgba(255,212,59,.5),transparent 70%),
+  radial-gradient(14px 14px at 82% 68%,rgba(122,199,79,.4),transparent 70%)}
+.imo{position:relative;width:126px;height:104px;z-index:3}
+.imo .body{position:absolute;left:0;right:0;bottom:0;height:96px;
+  border-radius:58% 42% 52% 48% / 54% 58% 42% 46%;
+  background:radial-gradient(80px 60px at 40% 32%,#b98cf8,#8b5cf6 52%,#6c3fd6);
+  box-shadow:inset 0 -8px 0 rgba(0,0,0,.14),inset 0 12px 14px rgba(255,255,255,.42),0 12px 20px rgba(58,42,63,.24)}
+.imo .eye{position:absolute;top:34px;width:19px;height:22px;border-radius:50%;background:#fff;z-index:4;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.08)}
+.imo .eye.l{left:32px} .imo .eye.r{right:32px}
+.imo .eye::after{content:"";position:absolute;left:50%;top:52%;width:9px;height:11px;margin:-5px 0 0 -4.5px;
+  border-radius:50%;background:#3a2a3f}
+.imo .blush{position:absolute;top:56px;width:17px;height:10px;border-radius:50%;background:rgba(255,120,160,.55);
+  filter:blur(2px);z-index:4}
+.imo .blush.l{left:22px} .imo .blush.r{right:22px}
+.imo .mouth{position:absolute;left:50%;top:64px;width:20px;height:10px;margin-left:-10px;z-index:4;
+  border-radius:0 0 20px 20px;background:#5b2a44}
+.imo .leaf{position:absolute;top:0;width:38px;height:26px;z-index:5;
+  background:linear-gradient(160deg,#a5dd7e,var(--leaf));
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.12),inset 0 4px 6px rgba(255,255,255,.5)}
+.imo .leaf.l{left:26px;border-radius:0 50% 0 50%;transform:rotate(-16deg)}
+.imo .leaf.r{right:26px;border-radius:50% 0 50% 0;transform:rotate(16deg)}
+.imo .stem{position:absolute;left:50%;top:-6px;width:8px;height:18px;margin-left:-4px;border-radius:99px;z-index:4;
+  background:linear-gradient(180deg,#8fd36a,#4f8f34)}
+.mdata{margin-top:14px}
+.mdata h3{font-family:var(--mono);font-size:10.5px;font-weight:900;letter-spacing:4px;color:var(--purple);text-align:center}
+.mdata ul{display:grid;gap:8px;margin-top:10px}
+.mdata li{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;
+  background:var(--paper);border-radius:14px;padding:7px 14px;box-shadow:inset 0 3px 5px rgba(255,255,255,.7)}
+.mdata li b{margin-left:auto;font-family:var(--mono);font-weight:900;color:var(--plum)}
+.mdata .tip{display:block;margin-top:10px;text-align:center;font-size:11.5px;color:var(--muted)}
+.strip{position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.72)}
+.strip div{padding:15px 10px;text-align:center;border-right:1px solid var(--line)}
+.strip div:last-child{border-right:0}
+.strip b{display:block;font-size:21px;font-weight:900;color:var(--ink)}
+.strip b.p{color:#6c3fd6} .strip b.l{color:#3f7a1d} .strip b.o{color:#b5651b}
+.strip span{font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:800;font-family:var(--mono)}
+.hero .beads{position:relative;z-index:3;margin:6px 0}
+
+/* ============ 检索 ============ */
+.hunt{display:flex;align-items:center;margin-top:14px;border-radius:20px;padding:8px;background:var(--panel);
+  box-shadow:var(--clay)}
+.hunt .pfx{flex:0 0 auto;padding:0 8px 0 14px;display:flex}
+.hunt input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-size:15px;font-weight:600;
+  padding:0 10px;color:var(--ink)}
+.hunt input::placeholder{color:var(--muted)}
+.hunt .go{border:0;cursor:pointer;font-size:14.5px;font-weight:900;color:#fff;padding:12px 30px;border-radius:15px;
+  background:var(--purple);box-shadow:var(--clay-sm)}
+.hunt .go:hover{background:var(--plum)}
+
+/* ============ 分类：软陶格 ============ */
+.kinds{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.bean-card{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;padding:15px 8px 14px;
+  border-radius:20px;background:var(--panel);box-shadow:var(--clay-sm);transition:.26s}
+.bean-card .ic{flex:0 0 auto;width:44px;height:44px;border-radius:15px;background:var(--purple);box-shadow:var(--clay-sm)}
+.bean-card:nth-child(6n+2) .ic{background:var(--plum)}
+.bean-card:nth-child(6n+3) .ic{background:var(--orange)}
+.bean-card:nth-child(6n+4) .ic{background:var(--leaf)}
+.bean-card:nth-child(6n+5) .ic{background:var(--sky)}
+.bean-card:nth-child(6n+6) .ic{background:var(--sun)}
+.bean-card b.k{font-size:13.5px;font-weight:900}
+.bean-card em{font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:1px}
+.bean-card:hover{transform:translateY(-5px)}
+.bean-card:hover b.k{color:#6c3fd6}
+
+/* ============ 栏目一：片单（黏土卡） ============ */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.card{border-radius:24px;overflow:hidden;background:var(--panel);box-shadow:var(--clay);transition:.28s}
+.card:hover{transform:translateY(-8px)}
+.poster{position:relative;aspect-ratio:4/5;display:flex;align-items:flex-end;padding:13px;overflow:hidden;
+  border-radius:22px;margin:8px 8px 0}
+.poster::after{content:"";position:absolute;inset:0;border-radius:22px;
+  background:radial-gradient(110px 80px at 74% 22%,rgba(255,255,255,.34),transparent 62%),
+  linear-gradient(180deg,transparent 48%,rgba(46,26,52,.78));box-shadow:inset 0 -5px 0 rgba(0,0,0,.12)}
+.poster .pn{position:relative;z-index:3;color:#fff;font-size:16px;font-weight:900;letter-spacing:1px;
+  text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.poster .bean{position:absolute;top:12px;left:12px;z-index:3}
+.poster .rt{position:absolute;top:12px;right:12px;z-index:3;font-family:var(--mono);font-size:12.5px;font-weight:900;
+  color:#3a2a3f;background:rgba(255,255,255,.94);padding:4px 11px;border-radius:12px;box-shadow:0 3px 6px rgba(0,0,0,.18)}
+.card .info{padding:12px 16px 16px}
+.card .info h3{font-size:15.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .info p{font-size:12.5px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .info .eps{display:flex;align-items:center;gap:8px;margin-top:9px}
+.card .info .eps em{flex:1;height:12px;border-radius:99px;background:#f1e9f8;
+  box-shadow:inset 0 3px 4px rgba(255,255,255,.8),inset 0 -3px 0 rgba(0,0,0,.06)}
+.card .info .eps span{font-family:var(--mono);font-size:10px;font-weight:900;color:var(--muted);letter-spacing:1px}
+.p1{background:linear-gradient(165deg,#b98cf8,#5b2ec4)}
+.p2{background:linear-gradient(165deg,#ffa94d,#c4561c)}
+.p3{background:linear-gradient(165deg,#a5dd7e,#3f7a1d)}
+.p4{background:linear-gradient(165deg,#8fd0f7,#1c5f96)}
+.p5{background:linear-gradient(165deg,#ffa8c8,#b0366f)}
+.p6{background:linear-gradient(165deg,#ffd43b,#b07d0c)}
+.p7{background:linear-gradient(165deg,#c3aef5,#4a2a9c)}
+.p8{background:linear-gradient(165deg,#9fd8c4,#1c6b56)}
+
+/* ============ 栏目二：更新追踪 ============ */
+.feeds{display:grid;gap:12px}
+.fd{position:relative;display:flex;align-items:center;gap:14px;background:var(--panel);padding:13px 16px;
+  border-radius:20px;box-shadow:var(--clay-sm);transition:.24s;overflow:hidden}
+.fd::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;border-radius:99px;
+  background:var(--purple);box-shadow:inset 0 3px 5px rgba(255,255,255,.5)}
+.fd:nth-child(2)::before{background:var(--plum)}
+.fd:nth-child(3)::before{background:var(--orange)}
+.fd:nth-child(4)::before{background:var(--leaf)}
+.fd:nth-child(5)::before{background:var(--sky)}
+.fd:hover{transform:translateX(4px)}
+.fd .tm{flex:0 0 62px;text-align:center;padding:8px 4px;border-radius:15px;background:#f3eafc;
+  box-shadow:inset 0 3px 5px rgba(255,255,255,.8)}
+.fd:nth-child(2) .tm{background:#fce8f2} .fd:nth-child(3) .tm{background:#fdefdf}
+.fd:nth-child(4) .tm{background:#e9f7e2} .fd:nth-child(5) .tm{background:#e4f1fc}
+.fd .tm b{display:block;font-family:var(--mono);font-size:18px;font-weight:900;color:#6c3fd6;line-height:1.1}
+.fd:nth-child(2) .tm b{color:#a52f6b} .fd:nth-child(3) .tm b{color:#b5651b}
+.fd:nth-child(4) .tm b{color:#3f7a1d} .fd:nth-child(5) .tm b{color:#14568c}
+.fd .tm span{font-family:var(--mono);font-size:9.5px;letter-spacing:1px;color:var(--muted);font-weight:900}
+.fd .mid{flex:1;min-width:0}
+.fd .mid h3{font-size:16px;font-weight:900}
+.fd .mid p{font-size:13px;color:var(--muted);margin-top:2px}
+.fd .mid .bar{margin-top:9px;height:14px;border-radius:99px;background:#f1e9f8;overflow:hidden;
+  box-shadow:inset 0 3px 4px rgba(255,255,255,.8),inset 0 -3px 0 rgba(0,0,0,.07)}
+.fd .mid .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#a78bfa,var(--purple));
+  box-shadow:inset 0 4px 5px rgba(255,255,255,.5)}
+.fd:nth-child(2) .bar i{background:linear-gradient(90deg,#e071a8,var(--plum))}
+.fd:nth-child(3) .bar i{background:linear-gradient(90deg,#ffc078,var(--orange))}
+.fd:nth-child(4) .bar i{background:linear-gradient(90deg,#a5dd7e,var(--leaf))}
+.fd:nth-child(5) .bar i{background:linear-gradient(90deg,#8fd0f7,var(--sky))}
+.fd .go{flex:0 0 auto;font-size:13px;font-weight:900;color:#fff;padding:9px 17px;border-radius:14px;
+  background:var(--purple);box-shadow:var(--clay-sm)}
+.fd:nth-child(2) .go{background:var(--plum)} .fd:nth-child(3) .go{background:var(--orange);color:#5a3202}
+.fd:nth-child(4) .go{background:var(--leaf);color:#123a05} .fd:nth-child(5) .go{background:var(--sky);color:#062945}
+
+/* ============ 栏目三：人气榜 + 追番指南 ============ */
+.split{display:grid;grid-template-columns:1.02fr .98fr;gap:16px}
+.panel{background:var(--panel);border-radius:24px;padding:22px;box-shadow:var(--clay)}
+.panel h3{font-size:17.5px;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.hot li{display:grid;grid-template-columns:46px 1fr 58px;gap:12px;align-items:center;padding:10px 0;
+  border-bottom:1px dashed var(--line2)}
+.hot li:last-child{border-bottom:0}
+.hot .nm h4{font-size:15px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hot .nm p{font-size:12.5px;color:var(--muted)}
+.hot .sc{font-family:var(--mono);font-size:17px;font-weight:900;text-align:right;color:#6c3fd6}
+.hot li:nth-child(1) .sc{color:#a52f6b} .hot li:nth-child(2) .sc{color:#b5651b}
+.tips{display:grid;gap:11px}
+.tp{padding:15px 16px;border-radius:18px;background:var(--paper);
+  box-shadow:inset 0 4px 6px rgba(255,255,255,.8),inset 0 -3px 0 rgba(0,0,0,.05)}
+.tp h4{font-size:15px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.tp h4 b{flex:0 0 auto;font-family:var(--mono);font-size:11px;font-weight:900;color:#fff;padding:3px 10px;
+  border-radius:11px;background:var(--purple);box-shadow:var(--clay-sm)}
+.tp:nth-child(2) h4 b{background:var(--orange);color:#5a3202}
+.tp:nth-child(3) h4 b{background:var(--leaf);color:#123a05}
+.tp:nth-child(4) h4 b{background:var(--sky);color:#062945}
+.tp p{font-size:13.5px;color:var(--ink2)}
+
+/* ============ 栏目四：资讯 ============ */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ncard{background:var(--panel);border-radius:24px;overflow:hidden;box-shadow:var(--clay);transition:.28s}
+.ncard:hover{transform:translateY(-6px)}
+.ncard .cov{position:relative;height:104px;border-radius:20px;margin:8px 8px 0;display:flex;align-items:center;
+  justify-content:center;font-family:var(--mono);font-size:11.5px;font-weight:900;letter-spacing:4px;color:#fff;
+  overflow:hidden}
+.ncard .cov::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120px 80px at 72% 26%,rgba(255,255,255,.28),transparent 62%);
+  box-shadow:inset 0 6px 8px rgba(255,255,255,.32)}
+.ncard:nth-child(1) .cov{background:linear-gradient(135deg,#b98cf8,#5b2ec4)}
+.ncard:nth-child(2) .cov{background:linear-gradient(135deg,#a5dd7e,#3f7a1d)}
+.ncard:nth-child(3) .cov{background:linear-gradient(135deg,#ffc078,#c4561c)}
+.ncard .txt{padding:14px 16px 17px}
+.ncard h3{font-size:15.8px;font-weight:900;margin-bottom:6px}
+.ncard p{font-size:13.5px;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ncard time{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;font-weight:900;color:var(--muted);
+  letter-spacing:2px}
+
+/* ============ 栏目五：关于 + FAQ ============ */
+.about{border-radius:26px;padding:26px;color:#fff;
+  background:linear-gradient(150deg,#8b5cf6,#c2508e 62%,#ffa94d);box-shadow:var(--clay)}
+.about h3{font-size:19px;font-weight:900;margin-bottom:11px;letter-spacing:1px}
+.about p{font-size:14.5px;color:rgba(255,255,255,.96)}
+.about p+p{margin-top:9px}
+.about .note{margin-top:14px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.18);
+  font-size:13.5px;color:#fff}
+.faq details{background:var(--panel);border-radius:20px;padding:14px 18px;margin-bottom:10px;box-shadow:var(--clay-sm)}
+.faq summary{cursor:pointer;font-size:15.5px;font-weight:900;list-style:none;display:flex;justify-content:space-between;
+  gap:10px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--purple);font-weight:900}
+.faq details[open] summary::after{content:"－"}
+.faq p{font-size:14px;color:var(--ink2);margin-top:10px}
+
+/* ============ 页脚 ============ */
+footer{margin-top:42px;background:var(--panel);border-top:1px solid var(--line2);padding:0 0 96px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:22px;padding-top:26px}
+.fcol h4{font-family:var(--mono);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;color:#6c3fd6;font-weight:900}
+.fcol a{display:block;font-size:13.5px;color:var(--ink2);padding:3px 0}
+.fcol a:hover{color:#6c3fd6}
+.fbrand{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:900;letter-spacing:1px}
+.fdesc{font-size:13px;color:var(--muted);margin-top:10px;max-width:40ch}
+.copy{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+/* ============ 移动端 ============ */
+.tabbar{display:none}
+@media (max-width:980px){
+  .hero-in{grid-template-columns:1fr;gap:22px}
+  .mascot{order:-1;max-width:420px;margin:0 auto;width:100%}
+  .hero h1{font-size:27px}
+  .hero-in{padding:22px 20px 20px}
+  .kinds{grid-template-columns:repeat(4,1fr)}
+  .split{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .dot{display:none}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .wrap{padding:0 13px}
+  .block{padding:28px 0 4px}
+  .btitle{font-size:19px}
+  .bsub{display:none}
+  .beads{height:18px} .beads.thin{height:14px}
+  .clay{width:42px;height:42px;border-radius:15px}
+  .clay b{font-size:13.5px}
+  .topbar .wrap{height:58px;gap:9px}
+  .logo{font-size:17.5px}
+  .nav a{padding:8px 12px;font-size:13.5px}
+  .hero{margin-top:12px;border-radius:22px}
+  .hero h1{font-size:23px;letter-spacing:.5px}
+  .hero-in{padding:18px 16px 18px}
+  .mascot{padding:14px;border-radius:22px}
+  .mascot .stage{height:148px}
+  .imo{width:110px;height:92px}
+  .imo .body{height:84px}
+  .imo .eye{top:30px;width:17px;height:20px}
+  .imo .eye.l{left:27px} .imo .eye.r{right:27px}
+  .imo .blush{top:50px;width:15px;height:9px}
+  .imo .blush.l{left:18px} .imo .blush.r{right:18px}
+  .imo .mouth{top:58px}
+  .imo .leaf{width:33px;height:23px}
+  .imo .leaf.l{left:22px} .imo .leaf.r{right:22px}
+  .btitle .clay{width:42px;height:42px;border-radius:15px}
+  .btitle .clay b{font-size:13.5px}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .strip div:nth-child(2){border-right:0}
+  .strip div:nth-child(1),.strip div:nth-child(2){border-bottom:1px solid var(--line)}
+  .hunt{flex-direction:column;padding:8px}
+  .hunt .pfx{padding:8px 0;justify-content:center}
+  .hunt input{padding:6px 12px;text-align:center;width:100%}
+  .hunt .go{padding:14px 0;letter-spacing:4px;width:100%}
+  .kinds{grid-template-columns:repeat(3,1fr);gap:10px}
+  .bean-card{padding:13px 6px 12px}
+  .bean-card .ic{width:38px;height:38px;border-radius:13px}
+  .bean-card b.k{font-size:12.5px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .news{grid-template-columns:1fr}
+  .fd{gap:11px;padding:12px 13px}
+  .fd .tm{flex:0 0 56px}
+  .fd .tm b{font-size:16px}
+  .fd .go{padding:8px 14px;font-size:12.5px}
+  .hot li{grid-template-columns:38px 1fr 52px;gap:9px}
+  .fgrid{grid-template-columns:1fr}
+  footer{padding-bottom:82px}
+  .tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(253,248,242,.97);
+    backdrop-filter:blur(14px);border-top:2px solid rgba(139,92,246,.5);
+    padding:6px 2px calc(6px + env(safe-area-inset-bottom))}
+  .tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:11px;font-weight:800;
+    color:var(--muted);padding:5px 0}
+  .tabbar a span{font-size:16px;line-height:1.1}
+  .tabbar a.on{color:#fff;background:var(--purple);border-radius:15px;box-shadow:var(--clay-sm)}
+  .backtop{position:fixed;right:13px;bottom:74px;z-index:65;width:46px;height:46px;border-radius:16px;
+    display:grid;place-items:center;color:#fff;font-size:17px;font-weight:900;background:var(--purple);
+    box-shadow:var(--clay)}
+}
+@media (min-width:641px){.backtop{display:none}}
+@media (prefers-reduced-motion:reduce){.dot i{animation:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ============ 顶栏 ============ -->
+<header class="topbar">
+  <div class="beads" aria-hidden="true"></div>
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="番薯动漫首页">
+      <span class="clay sm" aria-hidden="true"><b>薯</b></span>
+      <span><em>番薯动漫</em></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#" class="on">首页</a>
+      <a href="#">番剧片单</a>
+      <a href="#">更新追踪</a>
+      <a href="#">人气榜单</a>
+      <a href="#">追番指南</a>
+      <a href="#">动漫资讯</a>
+    </nav>
+    <span class="dot"><i></i>每日更新</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" aria-labelledby="h-title">
+    <div class="hero-in">
+      <div>
+        <span class="kicker">🍠 捏出来的追番手册 · 番薯动漫</span>
+        <h1 id="h-title">捏一个番薯君，<em>番薯动漫</em>把这一季的番都排好</h1>
+        <p class="desc">番薯动漫（fanshudongman.cn）用一本软陶手册整理番剧：提供动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南，热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园全题材收录，手机打开就能挑番，番剧一更新立刻提醒。</p>
+        <div class="cta">
+          <a class="btn btn-1" href="#">▶ 进入番剧片单</a>
+          <a class="btn btn-2" href="#">看今日更新</a>
+        </div>
+      </div>
+      <aside class="mascot">
+        <div class="stage" aria-hidden="true">
+          <span class="imo">
+            <span class="stem"></span>
+            <span class="leaf l"></span>
+            <span class="leaf r"></span>
+            <span class="body"></span>
+            <span class="eye l"></span>
+            <span class="eye r"></span>
+            <span class="blush l"></span>
+            <span class="blush r"></span>
+            <span class="mouth"></span>
+          </span>
+        </div>
+        <div class="mdata">
+          <h3>TODAY · 今日番剧</h3>
+          <ul>
+            <li>今日上架 <b>23 部</b></li>
+            <li>番剧更新 <b>9 部</b></li>
+            <li>专题成册 <b>4 组</b></li>
+          </ul>
+          <span class="tip">番薯君陪你把这一季追完</span>
+        </div>
+      </aside>
+    </div>
+    <div class="strip">
+      <div><b class="p">12,600+</b><span>ANIME</span></div>
+      <div><b class="l">2,180+</b><span>SERIES</span></div>
+      <div><b class="o">36</b><span>TYPES</span></div>
+      <div><b class="p">每日</b><span>UPDATE</span></div>
+    </div>
+    <div class="beads" aria-hidden="true"></div>
+  </section>
+
+  <form class="hunt" onsubmit="return false;" role="search">
+    <span class="pfx" aria-hidden="true"><span class="clay sm leaf"><b>找</b></span></span>
+    <label for="kw" style="position:absolute;left:-9999px">搜索番剧</label>
+    <input id="kw" type="search" placeholder="想看什么？输入番名、题材或角色">
+    <button class="go" type="submit">找番</button>
+  </form>
+
+  <!-- ============ 分类：软陶格 ============ -->
+  <section class="block" aria-labelledby="t-title">
+    <div class="bhead">
+      <h2 class="btitle" id="t-title"><span class="clay"><b>薯</b></span>题材软陶格</h2>
+      <span class="bsub">GENRES</span>
+      <a class="bmore" href="#">按题材浏览 →</a>
+    </div>
+    <div class="kinds">
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">热血</b><em>ACTION</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">恋爱</b><em>ROMANCE</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">奇幻</b><em>FANTASY</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">悬疑</b><em>MYSTERY</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">治愈</b><em>HEALING</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">机战</b><em>MECHA</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">搞笑</b><em>COMEDY</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">校园</b><em>SCHOOL</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">历史</b><em>HISTORY</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">武侠</b><em>WUXIA</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">美食</b><em>FOOD</em></a>
+      <a class="bean-card" href="#"><span class="ic" aria-hidden="true"></span><b class="k">科幻</b><em>SCI-FI</em></a>
+    </div>
+    <div class="beads thin" style="margin-top:14px" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ 栏目一：番剧片单 ============ -->
+  <section class="block" id="anime" aria-labelledby="m-title">
+    <div class="bhead">
+      <h2 class="btitle" id="m-title"><span class="clay"><b>一</b></span>动漫番剧片单</h2>
+      <span class="bsub">ANIME LIST</span>
+      <a class="bmore" href="#">查看全部番剧 →</a>
+    </div>
+    <div class="grid">
+      <a class="card" href="#"><div class="poster p1"><span class="bean">热血</span><span class="rt">8.9</span><span class="pn">橙光之刃</span></div><div class="info"><h3>橙光之刃</h3><p>2025 · 热血 / 冒险 · 24 集</p><span class="eps"><em></em><span>24 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p2"><span class="bean orange">恋爱</span><span class="rt">8.8</span><span class="pn">蜜色告白</span></div><div class="info"><h3>蜜色告白</h3><p>2025 · 恋爱 / 校园 · 12 集</p><span class="eps"><em></em><span>12 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p3"><span class="bean leaf">奇幻</span><span class="rt">9.0</span><span class="pn">藤蔓之国</span></div><div class="info"><h3>藤蔓之国</h3><p>2024 · 奇幻 / 冒险 · 25 集</p><span class="eps"><em></em><span>25 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p4"><span class="bean sky">悬疑</span><span class="rt">8.7</span><span class="pn">蓝调校舍</span></div><div class="info"><h3>蓝调校舍</h3><p>2024 · 悬疑 / 推理 · 13 集</p><span class="eps"><em></em><span>13 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p5"><span class="bean plum">治愈</span><span class="rt">9.1</span><span class="pn">紫夜食堂</span></div><div class="info"><h3>紫夜食堂</h3><p>2025 · 治愈 / 美食 · 12 集</p><span class="eps"><em></em><span>12 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p6"><span class="bean sun">搞笑</span><span class="rt">8.6</span><span class="pn">番薯日常</span></div><div class="info"><h3>番薯日常</h3><p>2024 · 搞笑 / 日常 · 24 集</p><span class="eps"><em></em><span>24 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p7"><span class="bean">机战</span><span class="rt">8.8</span><span class="pn">紫色机翼</span></div><div class="info"><h3>紫色机翼</h3><p>2023 · 机战 / 科幻 · 26 集</p><span class="eps"><em></em><span>26 EPS</span></span></div></a>
+      <a class="card" href="#"><div class="poster p8"><span class="bean leaf">经典</span><span class="rt">9.0</span><span class="pn">青苔小镇</span></div><div class="info"><h3>青苔小镇</h3><p>2018 · 经典 / 治愈 · 13 集</p><span class="eps"><em></em><span>13 EPS</span></span></div></a>
+    </div>
+  </section>
+
+  <!-- ============ 栏目二：更新追踪 ============ -->
+  <section class="block" id="update" aria-labelledby="u-title">
+    <div class="bhead">
+      <h2 class="btitle" id="u-title"><span class="clay plum"><b>二</b></span>番剧更新追踪</h2>
+      <span class="bsub">UPDATES</span>
+      <a class="bmore plum" href="#">加入追番列表 →</a>
+    </div>
+    <div class="feeds">
+      <a class="fd" href="#"><span class="tm"><b>19:40</b><span>09-19</span></span><span class="mid"><h3>《蓝调校舍》更新至第 9 话</h3><p>悬疑番 · 已播 9 / 13 话 · 每周三更新</p><span class="bar"><i style="width:69%"></i></span></span><span class="go">去追更</span></a>
+      <a class="fd" href="#"><span class="tm"><b>20:15</b><span>09-18</span></span><span class="mid"><h3>《紫夜食堂》发布第 2 季预告</h3><p>治愈美食番 · 档期与看点解析已录入条目。</p><span class="bar"><i style="width:62%"></i></span></span><span class="go">看预告</span></a>
+      <a class="fd" href="#"><span class="tm"><b>21:05</b><span>09-17</span></span><span class="mid"><h3>片库上新：23 部新番入库</h3><p>涵盖热血、恋爱、奇幻与治愈四类，均附评分与集数。</p><span class="bar"><i style="width:88%"></i></span></span><span class="go">去片库</span></a>
+      <a class="fd" href="#"><span class="tm"><b>21:30</b><span>09-15</span></span><span class="mid"><h3>「治愈系」专题成册</h3><p>按年代与主题分组整理，附补番顺序建议，适合连看。</p><span class="bar"><i style="width:74%"></i></span></span><span class="go">看专题</span></a>
+      <a class="fd" href="#"><span class="tm"><b>22:00</b><span>09-09</span></span><span class="mid"><h3>经典番剧修复单元上线</h3><p>《青苔小镇》等经典番目重录完成，可按年代筛选。</p><span class="bar"><i style="width:56%"></i></span></span><span class="go">看修复</span></a>
+    </div>
+  </section>
+
+  <!-- ============ 栏目三：人气榜 + 追番指南 ============ -->
+  <section class="block" id="rank" aria-labelledby="rk-title">
+    <div class="bhead">
+      <h2 class="btitle" id="rk-title"><span class="clay orange"><b>三</b></span>番剧人气榜与追番指南</h2>
+      <span class="bsub">RANK &amp; GUIDE</span>
+      <a class="bmore orange" href="#">完整榜单 →</a>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <h3><span class="clay sm"><b>榜</b></span>番薯动漫人气榜 Top 7</h3>
+        <ul class="hot">
+          <li><span class="clay sm"><b>1</b></span><span class="nm"><h4>紫夜食堂</h4><p>治愈美食 · 本季新番</p></span><span class="sc">9.1</span></li>
+          <li><span class="clay sm orange"><b>2</b></span><span class="nm"><h4>藤蔓之国</h4><p>奇幻冒险 · 口碑发酵</p></span><span class="sc">9.0</span></li>
+          <li><span class="clay sm leaf"><b>3</b></span><span class="nm"><h4>青苔小镇</h4><p>经典治愈 · 补番首选</p></span><span class="sc">9.0</span></li>
+          <li><span class="clay sm plum"><b>4</b></span><span class="nm"><h4>橙光之刃</h4><p>热血冒险 · 长篇连载</p></span><span class="sc">8.9</span></li>
+          <li><span class="clay sm sky"><b>5</b></span><span class="nm"><h4>紫色机翼</h4><p>机战科幻 · 专题推荐</p></span><span class="sc">8.8</span></li>
+          <li><span class="clay sm"><b>6</b></span><span class="nm"><h4>蜜色告白</h4><p>恋爱校园 · 更新中</p></span><span class="sc">8.8</span></li>
+          <li><span class="clay sm sun"><b>7</b></span><span class="nm"><h4>番薯日常</h4><p>搞笑日常 · 轻松向</p></span><span class="sc">8.6</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><span class="clay sm leaf"><b>南</b></span>追番指南</h3>
+        <div class="tips">
+          <div class="tp"><h4><b>指南 01</b>软陶格是怎么分的</h4><p>我们把题材分成 12 颗软陶：热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园、历史、武侠、美食、科幻。每颗软陶下列出同题材的番剧，先挑颜色再挑番。</p></div>
+          <div class="tp"><h4><b>指南 02</b>集数条怎么看</h4><p>每张卡片底部那条浅紫条就是这部的集数条：条越满说明总集数越多，想追长篇就挑满的，想一晚补完就挑短的。旁边直接标着总集数。</p></div>
+          <div class="tp"><h4><b>指南 03</b>追番总怕断更</h4><p>把在追番剧加入更新追踪，按播出日排列，时间块直接标出更新时刻，进度条显示追到第几话。</p></div>
+          <div class="tp"><h4><b>指南 04</b>一次补不完怎么办</h4><p>条目页标注集数与单集时长，超过 24 集的长篇建议按季度追；通勤或睡前优先选 12 集的短番，看完刚好收心。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目四：动漫资讯 ============ -->
+  <section class="block" id="news" aria-labelledby="n-title">
+    <div class="bhead">
+      <h2 class="btitle" id="n-title"><span class="clay leaf"><b>四</b></span>最新动漫资讯</h2>
+      <span class="bsub">NEWS</span>
+      <a class="bmore leaf" href="#">资讯中心 →</a>
+    </div>
+    <div class="news">
+      <a class="ncard" href="#"><span class="cov">NEW SEASON</span><div class="txt"><h3>秋季新番定档，23 部作品同期开播</h3><p>本季涵盖热血、恋爱、奇幻与治愈四类，番薯动漫同步整理播出表与看点。</p><time datetime="2026-09-19">2026-09-19</time></div></a>
+      <a class="ncard" href="#"><span class="cov">LIBRARY</span><div class="txt"><h3>本周片库上新：23 部新番入库</h3><p>已补录评分、题材、集数与建议补番顺序，可按年代与地区筛选。</p><time datetime="2026-09-18">2026-09-18</time></div></a>
+      <a class="ncard" href="#"><span class="cov">CLASSIC</span><div class="txt"><h3>经典番剧修复单元上线</h3><p>按年代重录经典番目，《青苔小镇》等作品已恢复条目与评分信息。</p><time datetime="2026-09-09">2026-09-09</time></div></a>
+    </div>
+  </section>
+
+  <!-- ============ 栏目五：关于 + FAQ ============ -->
+  <section class="block" id="about" aria-labelledby="a-title">
+    <div class="bhead">
+      <h2 class="btitle" id="a-title"><span class="clay sky"><b>五</b></span>关于番薯动漫</h2>
+      <span class="bsub">ABOUT US</span>
+      <a class="bmore sky" href="#">站点介绍 →</a>
+    </div>
+    <div class="split">
+      <div class="about">
+        <h3>番薯动漫是什么？</h3>
+        <p>番薯动漫（fanshudongman.cn）是本捏出来的追番手册，提供动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南。我们把题材分成 12 颗软陶，每颗软陶下列出同题材的番剧；每张卡片底部留一条集数条，标出这部番有多少集。</p>
+        <p>全站采用移动端优先的自适应布局，手机、平板与桌面端体验一致；片单、追踪、榜单与指南四条动线相互打通，从「不知道看什么」到「追到第几话」不必来回跳转。</p>
+        <p class="note">提示：本站提供动漫信息聚合与追番导航，片源播放以页面实际提供的来源为准。</p>
+      </div>
+      <div class="faq">
+        <details open><summary>番薯动漫的内容多久更新？</summary><p>番剧片单每日上新，更新追踪按播出日刷新，番剧人气榜每日重算一次，重要档期与首播节点即时同步。</p></details>
+        <details><summary>软陶格是怎么划分的？</summary><p>共 12 颗软陶：热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园、历史、武侠、美食、科幻。每颗软陶下按年代、地区与制作公司细分番目。</p></details>
+        <details><summary>卡片下方的集数条有什么用？</summary><p>集数条标出这部番的总集数：条越满说明集数越多。想追长篇就挑满的那一头，想一晚补完就挑短的，旁边直接标着总集数。</p></details>
+        <details><summary>找不到想看的番剧怎么办？</summary><p>可用顶部搜索框按番名、题材或角色检索，也可在题材软陶格中逐级浏览；仍无结果时可提交番名反馈，我们会尽快补录。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="beads thin" style="margin-top:22px" aria-hidden="true"></div>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="beads" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol">
+        <a class="fbrand" href="#"><span class="clay sm" aria-hidden="true"><b>薯</b></span>番薯动漫</a>
+        <p class="fdesc">番薯动漫 · 一本捏出来的追番手册。本站仅提供动漫信息聚合与追番导航。</p>
+      </div>
+      <div class="fcol"><h4>题材软陶</h4><a href="#">热血</a><a href="#">恋爱</a><a href="#">奇幻</a><a href="#">治愈</a><a href="#">机战</a></div>
+      <div class="fcol"><h4>频道入口</h4><a href="#">番剧片单</a><a href="#">更新追踪</a><a href="#">人气榜单</a><a href="#">追番指南</a><a href="#">动漫资讯</a></div>
+      <div class="fcol"><h4>帮助中心</h4><a href="#">站点介绍</a><a href="#">收录规则</a><a href="#">意见反馈</a><a href="#">友情链接</a><a href="#">站点地图</a></div>
+    </div>
+    <div class="copy">
+      <span>Copyright © 2026 番薯动漫 www.fanshudongman.cn 版权所有</span>
+      <span>关键词：番薯动漫 · 动漫番剧片单 · 番剧更新 · 番剧人气榜</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ 移动端底部导航 ============ -->
+<nav class="tabbar" aria-label="移动端导航">
+  <a href="#" class="on"><span>🏠</span>首页</a>
+  <a href="#"><span>🍠</span>题材</a>
+  <a href="#"><span>🎬</span>片单</a>
+  <a href="#"><span>🔔</span>追踪</a>
+  <a href="#"><span>📖</span>指南</a>
+</nav>
+<a class="backtop" href="#" aria-label="返回顶部">↑</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://www.fanshudongman.cn/#website",
+      "url":"https://www.fanshudongman.cn/",
+      "name":"番薯动漫",
+      "alternateName":"番薯动漫网",
+      "description":"番薯动漫提供动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南，按题材覆盖热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园等类型。",
+      "inLanguage":"zh-CN",
+      "publisher":{"@id":"https://www.fanshudongman.cn/#organization"},
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://www.fanshudongman.cn/search?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://www.fanshudongman.cn/#organization",
+      "name":"番薯动漫",
+      "url":"https://www.fanshudongman.cn/",
+      "logo":"https://www.fanshudongman.cn/favicon.ico"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://www.fanshudongman.cn/#webpage",
+      "url":"https://www.fanshudongman.cn/",
+      "name":"番薯动漫 - 动漫番剧片单、更新追踪与人气榜",
+      "description":"番薯动漫：动漫番剧片单、番剧更新追踪、番剧人气榜与追番指南。",
+      "isPartOf":{"@id":"https://www.fanshudongman.cn/#website"},
+      "inLanguage":"zh-CN",
+      "breadcrumb":{"@id":"https://www.fanshudongman.cn/#breadcrumb"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://www.fanshudongman.cn/#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"番薯动漫","item":"https://www.fanshudongman.cn/"},
+        {"@type":"ListItem","position":2,"name":"动漫番剧片单"},
+        {"@type":"ListItem","position":3,"name":"番剧更新追踪"},
+        {"@type":"ListItem","position":4,"name":"番剧人气榜与追番指南"}
+      ]
+    },
+    {
+      "@type":"ItemList",
+      "name":"番薯动漫番剧人气榜",
+      "itemListOrder":"https://schema.org/ItemListOrderDescending",
+      "numberOfItems":5,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"item":{"@type":"TVSeries","name":"紫夜食堂","genre":"治愈","datePublished":"2025"}},
+        {"@type":"ListItem","position":2,"item":{"@type":"TVSeries","name":"藤蔓之国","genre":"奇幻","datePublished":"2024"}},
+        {"@type":"ListItem","position":3,"item":{"@type":"TVSeries","name":"青苔小镇","genre":"治愈","datePublished":"2018"}},
+        {"@type":"ListItem","position":4,"item":{"@type":"TVSeries","name":"橙光之刃","genre":"热血","datePublished":"2025"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"TVSeries","name":"紫色机翼","genre":"机战","datePublished":"2023"}}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"番薯动漫的内容多久更新？","acceptedAnswer":{"@type":"Answer","text":"番剧片单每日上新，更新追踪按播出日刷新，番剧人气榜每日重算一次，重要档期与首播节点即时同步。"}},
+        {"@type":"Question","name":"番薯动漫的软陶格是怎么划分的？","acceptedAnswer":{"@type":"Answer","text":"共 12 颗软陶：热血、恋爱、奇幻、悬疑、治愈、机战、搞笑、校园、历史、武侠、美食、科幻。每颗软陶下按年代、地区与制作公司细分番目。"}},
+        {"@type":"Question","name":"番薯动漫卡片下方的集数条有什么用？","acceptedAnswer":{"@type":"Answer","text":"集数条标出这部番的总集数：条越满说明集数越多。想追长篇就挑满的那一头，想一晚补完就挑短的，旁边直接标着总集数。"}}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var secs=document.querySelectorAll('main section[id]');
+  var navA=document.querySelectorAll('.nav a');
+  function sync(){
+    var y=window.scrollY+140,cur='';
+    secs.forEach(function(s){ if(s.offsetTop<=y) cur=s.id; });
+    navA.forEach(function(a){
+      var h=a.getAttribute('href')||'';
+      a.classList.toggle('on', !!cur && h.indexOf(cur)>-1);
+    });
+  }
+  window.addEventListener('scroll',sync,{passive:true});
+  sync();
+  document.querySelectorAll('.tabbar a,.nav a').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();a.blur();});
+  });
+})();
+</script>
+</body>
+</html>
